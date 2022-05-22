@@ -139,6 +139,22 @@ fun main() {
     println("${car1.component3()}")
     println("${car1.component4()}")
 
+    // When you need an object with a slight change, you use objects instead of creating a
+    // new class
+
+    val aadmi = insaan("Atharv",20)
+    println("I am ${aadmi.name}")
+    aadmi.pray()
+
+    val bandha = object: insaan("Mahesh",20){
+        override fun pray(){
+            println("I am an atheist")
+        }
+    }
+    println("I am ${bandha.name}")
+    bandha.pray()
+
+    CompanionObject.test()
 
 
 }
