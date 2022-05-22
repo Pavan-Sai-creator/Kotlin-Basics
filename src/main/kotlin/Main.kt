@@ -15,6 +15,12 @@ fun main() {
         println("$nullable_name")
     }
 
+    val petName: String? = null
+    val petNameToPrint = petName ?: "You dont't have a pet"
+    println("$petNameToPrint")
+    //  (?:) is called Elvis operator. If LHS of (?) is not null, it returns value of LHS
+    // else it returns RHS of (:).
+
     // In Kotlin when() is used instead of switch.
     when(age){
         18 -> {
@@ -75,6 +81,63 @@ fun main() {
     val personsToGreet = mutableListOf("David","Ron","Jaqueline")
     sayHi("Hi",personsToGreet)
 
+    val person1 = Person()
+    person1.printInfo()
+
+    val person2 = Person("Pavan","Sai")
+    person2.printInfo()
+
+    val human = Human("Pavan",21)
+    val teacher = mathTeacher("Bala Muragan",40)
+    teacher.teachMaths()
+    val player = footballPlayer("Ronaldo",35,"LA Galaxy")
+    player.playFootball()
+
+    val badhsha = Horse("horse")
+    badhsha.describe()
+    println("I have ${badhsha.legs} legs and ${badhsha.nose} nose")
+    badhsha.specialAbility()
+
+    val kiara = Hyena("hyena")
+    kiara.describe()
+    println("I have ${kiara.legs} legs and ${kiara.nose} nose")
+    kiara.specialAbility()
+
+    val myChild = child()
+    println("${myChild.variable}")
+    myChild.functionWithImplementation()
+    myChild.abstractFunction()
+
+    val c = C()
+    c.f()
+
+    val nestedObject = OuterClass.NestedClass()
+    nestedObject.nestedFunction()
+
+    val innerObject = OuterClass2().InnerClass()
+    val x:String = innerObject.innerFunction()
+
+    val car1 = Car("Audi","A4","Sedan","Black")
+    val car2 = car1.copy()
+    val car3 = car1.copy(model="A6")
+
+    println("${car1.hashCode()}")
+    println("${car2.hashCode()}")
+    println("${car3.hashCode()}")
+
+    println("${car1.equals(car2)}")
+    println("${car1.equals(car3)}")
+
+    // Destructuring Declarations
+    val (c1brand,c1model,c1type,c1color) = car1
+
+    println("$c1brand, $c1color, $c1model, $c1type")
+
+    // Component functions
+    println("${car1.component1()}")
+    println("${car1.component2()}")
+    println("${car1.component3()}")
+    println("${car1.component4()}")
 
 
 
