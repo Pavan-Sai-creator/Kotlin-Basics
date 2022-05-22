@@ -1,3 +1,7 @@
+// Reference Links: https://www.youtube.com/watch?v=F9UC9DY-vIU
+//                  https://www.programiz.com/kotlin-programming
+
+
 fun main() {
     var age: Int = 21 // This is variable and can be reassigned
     val name: String = "Pavan" // This is constant and can't be modified
@@ -155,6 +159,11 @@ fun main() {
     bandha.pray()
 
     CompanionObject.test()
+
+    // HIGHER ORDER FUNCTIONS
+
+    // They are the functions that either return other functions or take other functions
+    // as parameters
 
 
 }
